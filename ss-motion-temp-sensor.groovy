@@ -14,8 +14,13 @@
  *
  */
 
+/**
+ *   This incorporates changes by Mark Grimes
+ *   - I care about Temp not Motion, so put that in the main display
+ */
+
 metadata {
-	definition (name: "SmartSense Motion/Temp Sensor", namespace: "smartthings", author: "SmartThings") {
+	definition (name: "SS* Temp/Motion Sensor", namespace: "mvgrimes", author: "Mark Grimes") {
 		capability "Motion Sensor"
 		capability "Configuration"
 		capability "Battery"
@@ -26,6 +31,7 @@ metadata {
         command "enrollResponse"
 
 		fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3305-S"
+        fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3325-S"
         fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3305"
         fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3325"
         fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3326"
@@ -62,7 +68,7 @@ metadata {
 			)
 		}
 		valueTile("battery", "device.battery", decoration: "flat", inactiveLabel: false, width: 2, height: 2) {
-			state "battery", label:'${currentValue}% battery', unit:""
+			state "battery", label:'${currentValue}% Battery', unit:""
 		}
 		standardTile("refresh", "device.refresh", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
 			state "default", action:"refresh.refresh", icon:"st.secondary.refresh"
