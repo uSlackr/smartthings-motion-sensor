@@ -68,13 +68,13 @@ metadata {
 			)
 		}
 		valueTile("battery", "device.battery", decoration: "flat", inactiveLabel: false, width: 2, height: 2) {
-			state "battery", label:'battery ${currentValue}%', unit:""
+			state "battery", label:'${currentValue}% battery', unit:""
 		}
 		standardTile("refresh", "device.refresh", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
 			state "default", action:"refresh.refresh", icon:"st.secondary.refresh"
 		}
 
-		main(["motion", "temperature"])
+		main(["temperature"])
 		details(["motion", "temperature", "battery", "refresh"])
 	}
 }
