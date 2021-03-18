@@ -35,7 +35,7 @@ metadata {
         fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3305"
         fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3325"
         fingerprint inClusters: "0000,0001,0003,0402,0500,0020,0B05", outClusters: "0019", manufacturer: "CentraLite", model: "3326"
-	fingerprint inClusters: “0000,0001,0003,0020,0500,0B05,FC81”, outClusters: “0019”, manufacturer: “lk”, model: " ZB-MotionSensor-D0003", deviceJoinName: “Linkind Motion Sensor”, mnmn: “SmartThings”, vid: “SmartThings-smartthings-SmartSense_Motion_Sensor” //Linkind Motion Detector
+	fingerprint inClusters: "0000,0001,0003,0020,0500,0B05,FC81", outClusters: "0019", manufacturer: "lk", model: "ZB-MotionSensor-D0003", deviceJoinName: "Linkind Motion Sensor”, mnmn: "SmartThings", vid: "SmartThings-smartthings-SmartSense_Motion_Sensor" //Linkind Motion Detector
 	}
 
 	simulator {
